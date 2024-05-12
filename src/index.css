@@ -1,0 +1,861 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Comfortaa:wght@300;400;700&display=swap');
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: 'Comfortaa', sans-serif;
+  color: #44b2a0;
+  background: linear-gradient(#3d0052, #002d3d, #002d3d, #002d3d, #3d0052);
+  display: grid
+    /* background-color: #00fc58; */
+}
+
+
+@media screen and (max-width:400px) {
+  .app {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .heading {
+    background-color: #00374b;
+    padding: 1rem 0 1rem;
+    border-radius: 40px;
+    border: 15px solid rgb(0, 81, 110);
+    box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    width: 92%;
+  }
+
+  .heading h1 {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 10vw;
+  }
+
+  .heading p {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 3.5vw;
+  }
+
+  .add-form {
+    background-color: none;
+    padding: 2.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width:97%;
+    margin-left: 10px;
+  }
+
+  .add-form h3 {
+    margin-right: 0rem;
+    font-size: 3.5vw;
+    display: none;
+  }
+
+  button,
+  select {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  input {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 1.8rem;
+    font-size: 1.2rem;
+    width: 20vw;
+  }
+
+  button {
+    background-color: #0051e7;
+    color: #fefae0;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    scale: 1.1;
+  }
+
+  .list {
+    background-image: url();
+    background-repeat: repeat-y;
+    background-attachment: local;
+    padding: 2.3rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+    width:100%;
+  }
+
+  .list ul {
+    list-style: none;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .list li {
+    color: #44b2a0;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.6rem;
+  }
+
+  .list input[type='checkbox'] {
+    height: 2rem;
+    width: 2rem;
+    accent-color: #00fc58;
+    cursor: pointer;
+  }
+
+  .list li button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.6rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+  }
+
+  .actions {
+    background-color: rgb(0, 81, 110);
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .actions button,
+  .actions select {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    margin: 1rem 0.25rem;
+  }
+
+  .stats {
+    background-color: #10a891;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .section-container {
+    width: 100%;
+    height: auto;
+    background-color: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .section-container p {
+    text-align: center;
+    font-size: 5vw;
+  }
+}
+
+@media screen and (min-width:400px) and (max-width:500px) {
+  .app {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .heading {
+    background-color: #00374b;
+    padding: 1rem 0 1rem;
+    border-radius: 40px;
+    border: 15px solid rgb(0, 81, 110);
+    box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    width: 92%;
+  }
+
+  .heading h1 {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 10vw;
+  }
+
+  .heading p {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 3.5vw;
+  }
+
+  .add-form {
+    background-color: none;
+    padding: 2.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width:97%;
+    margin-left: 10px;
+  }
+
+  .add-form h3 {
+    margin-right: 0rem;
+    font-size: 3.5vw;
+  }
+
+  button,
+  select {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  input {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 1.8rem;
+    font-size: 1.2rem;
+    width: 20vw;
+  }
+
+  button {
+    background-color: #0051e7;
+    color: #fefae0;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    scale: 1.1;
+  }
+
+  .list {
+    background-image: url();
+    background-repeat: repeat-y;
+    background-attachment: local;
+    padding: 2.3rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+    width:100%;
+  }
+
+  .list ul {
+    list-style: none;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .list li {
+    color: #44b2a0;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.6rem;
+  }
+
+  .list input[type='checkbox'] {
+    height: 2rem;
+    width: 2rem;
+    accent-color: #00fc58;
+    cursor: pointer;
+  }
+
+  .list li button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.6rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+  }
+
+  .actions {
+    background-color: rgb(0, 81, 110);
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .actions button,
+  .actions select {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    margin: 1rem 0.25rem;
+  }
+
+  .stats {
+    background-color: #10a891;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .section-container {
+    width: 100%;
+    height: auto;
+    background-color: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .section-container p {
+    text-align: center;
+    font-size: 5vw;
+  }
+}
+
+@media screen and (min-width:500px) and (max-width:750px) {
+  .app {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .heading {
+    background-color: #00374b;
+    padding: 1rem 0 1rem;
+    border-radius: 40px;
+    border: 15px solid rgb(0, 81, 110);
+    box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    width: 94%;
+  }
+
+  .heading h1 {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 8vw;
+  }
+
+  .heading p {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 3vw;
+  }
+
+  .add-form {
+    background-color: none;
+    padding: 2.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .add-form h3 {
+    margin-right: 0rem;
+    font-size: 3.5vw;
+  }
+
+  button,
+  select {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  input {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    width: 25vw;
+  }
+
+  button {
+    background-color: #0051e7;
+    color: #fefae0;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    scale: 1.1;
+  }
+
+  .list {
+    background-image: url();
+    background-repeat: repeat-y;
+    background-attachment: local;
+    color: #ffdd00;
+    padding: 2.3rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+
+  }
+
+  .list ul {
+    list-style: none;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list li {
+    color: #44b2a0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.6rem;
+  }
+
+  .list input[type='checkbox'] {
+    height: 3rem;
+    width: 3rem;
+    accent-color: #00fc58;
+    cursor: pointer;
+  }
+
+  .list li button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.6rem;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+  }
+
+  .actions {
+    background-color: rgb(0, 81, 110);
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .actions button,
+  .actions select {
+    padding: 0.8rem 2.4rem;
+    font-size: 1.4rem;
+    margin: 1rem 0.8rem;
+  }
+
+  .stats {
+    background-color: #10a891;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .section-container {
+    width: 90%;
+    height: auto;
+    background-color: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .section-container p {
+    text-align: center;
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width:750px) and (max-width:1000px) {
+  .app {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .heading {
+    background-color: #00374b;
+    padding: 1rem 0 1rem;
+    border-radius: 40px;
+    border: 20px solid rgb(0, 81, 110);
+    box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+  }
+
+  .heading h1 {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 6vw;
+  }
+
+  .heading p {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 2vw;
+  }
+
+  .add-form {
+    background-color: none;
+    padding: 2.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .add-form h3 {
+    margin-right: 2rem;
+    font-size: 2.5rem;
+  }
+
+  button,
+  select {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1.2rem 3.2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  input {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1.2rem 3.2rem;
+    font-size: 1.8rem;
+  }
+
+  button {
+    background-color: #0051e7;
+    color: #fefae0;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    scale: 1.1;
+  }
+
+  .list {
+    background-image: url();
+    background-repeat: repeat-y;
+    background-attachment: local;
+    color: #ffdd00;
+    padding: 2.3rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+
+  }
+
+  .list ul {
+    list-style: none;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list li {
+    color: #44b2a0;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.6rem;
+  }
+
+  .list input[type='checkbox'] {
+    height: 3rem;
+    width: 3rem;
+    accent-color: #00fc58;
+    cursor: pointer;
+  }
+
+  .list li button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.6rem;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+  }
+
+  .actions {
+    background-color: rgb(0, 81, 110);
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+
+  }
+
+  .actions button,
+  .actions select {
+    padding: 0.8rem 2.4rem;
+    font-size: 1.4rem;
+    margin: 0 0.8rem;
+  }
+
+  .stats {
+    background-color: #10a891;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .section-container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .section-container p {
+    text-align: center;
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .app {
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .heading {
+    background-color: #00374b;
+    padding: 4rem 0 1rem;
+    border-radius: 40px;
+    border: 20px solid rgb(0, 81, 110);
+    box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 18px 5px rgba(0, 0, 0, 0.75);
+  }
+
+  .heading h1 {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 6rem;
+  }
+
+  .heading p {
+    font-family: 'Borel';
+    text-align: center;
+    color: #44b2a0;
+    font-size: 2rem;
+  }
+
+  .add-form {
+    background-color: none;
+    padding: 2.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .add-form h3 {
+    margin-right: 2rem;
+    font-size: 2.4rem;
+  }
+
+  button,
+  select {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1.2rem 3.2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  input {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: none;
+    border-radius: 3rem;
+    padding: 1.2rem 3.2rem;
+    font-size: 1.8rem;
+  }
+
+  button {
+    background-color: #0051e7;
+    color: #fefae0;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    scale: 1.1;
+  }
+
+  .list {
+    background-image: url();
+    background-repeat: repeat-y;
+    background-attachment: local;
+    color: #ffdd00;
+    padding: 2.3rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+
+  }
+
+  .list ul {
+    list-style: none;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list li {
+    color: #44b2a0;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.6rem;
+  }
+
+  .list input[type='checkbox'] {
+    height: 3rem;
+    width: 3rem;
+    accent-color: #00fc58;
+    cursor: pointer;
+  }
+
+  .list li button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.6rem;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+  }
+
+  .actions {
+    background-color: rgb(0, 81, 110);
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+
+  }
+
+  .actions button,
+  .actions select {
+    padding: 0.8rem 2.4rem;
+    font-size: 1.4rem;
+    margin: 0 0.8rem;
+  }
+
+  .stats {
+    background-color: #10a891;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .section-container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .section-container p {
+    text-align: center;
+    font-size: 3vw;
+  }
+}
