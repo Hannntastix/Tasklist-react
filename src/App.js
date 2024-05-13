@@ -1,33 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './komponen/Header';
 import Form from './komponen/Form';
 import AssignmentList from './komponen/AssignmentList';
 import Footer from './komponen/Footer';
 import Addsection from './komponen/Addsection';
 
-const assigmentItems = [
-  {
-    id: 1,
-    name: 'PBO TUBES',
-    quantity: 1,
-    checked: false,
-  },
-  {
-    id: 2,
-    name: 'DRPL SKPL',
-    quantity: 1,
-    checked: false,
-  },
-  {
-    id: 3,
-    name: 'Socio tugas Video',
-    quantity: 1,
-    checked: false,
-  },
+// Mendapatkan data dari localStorage jika ada, jika tidak, gunakan data default
+const defaultAssigmentItems = [
 ];
 
 export default function App() {
-  const [items, setItems] = useState(assigmentItems);
+  const [items, setItems] = useState(() => {
+    const storedItems = JSON.parse(localStorage.getItem('assignmentItems'));
+    return storedItems || defaultAssigmentItems;
+  });
+
+  // Menyimpan data ke localStorage setiap kali items berubah
+  useEffect(() => {
+    localStorage.setItem('assignmentItems', JSON.stringify(items));
+  }, [items]);
 
   function handleAddItem(item) {
     setItems([...items, item]);
@@ -38,7 +29,9 @@ export default function App() {
   }
 
   function handleToggleItem(id) {
-    setItems((items) => items.map((item) => (item.id === id ? { ...item, checked: !item.checked } : item)));
+    setItems((items) =>
+      items.map((item) => (item.id === id ? { ...item, checked: !item.checked } : item))
+    );
   }
 
   function handleClearItems() {
